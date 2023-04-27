@@ -6,7 +6,6 @@ import {API_URL} from "../config";
 export function getFiles(dirId, sort) {
     return async dispatch => {
         try {
-            dispatch(showLoader())
             let url = `${API_URL}api/files`
             if (dirId) {
                 url = `${API_URL}api/files?parent=${dirId}`
@@ -24,7 +23,6 @@ export function getFiles(dirId, sort) {
         } catch (e) {
             alert(e.response.data.message)
         } finally {
-            dispatch(hideLoader())
         }
     }
 }
