@@ -1,1 +1,1 @@
-export const API_URL = `https://drop-back.herokuapp.com`
+export const API_URL = `https://drop-back.herokuapp.com/`
